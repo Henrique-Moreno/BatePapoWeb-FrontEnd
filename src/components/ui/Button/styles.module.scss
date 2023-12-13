@@ -1,0 +1,49 @@
+.button {
+    max-width: 600px;
+    background-color: var(--red-900);
+    border: 0;
+    padding: 0.4rem;
+    color: var(--branco);
+    border-radius: 0.5rem;
+    transition: filter 0.2s;
+    font-size: 22em;
+
+    &[disabled] {
+        cursor: not-allowed;
+        svg {
+            animation: animate 2s infinite;
+        }
+    }
+
+    &:hover {
+        filter: brightness(1.08);
+    }
+}
+
+.buttonText {
+    color: var(--branco);
+    text-align: center;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 450px) {
+    .button {
+        border-radius: 1rem;
+        background-color: var(--red-900);
+        color: var(--preto-azul);
+        padding: 1.7rem 0;
+    }
+    
+    .buttonText {
+        position: relative;
+        bottom: 0.9rem;
+    }
+}

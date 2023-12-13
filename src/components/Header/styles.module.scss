@@ -1,0 +1,93 @@
+.headerContainer {
+    height: 6rem;
+}
+
+.headerContent {
+    // max-width: 1120px;
+    height: 6rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        cursor: pointer;
+        color: var(--red-900);
+    }
+}
+
+.nomeUsuario {
+    display: flex;
+    align-items: center;
+
+    h2 {
+        padding-left: 1rem;
+        color: var(--branco);
+    }
+}
+
+.menuNav {
+    display: flex;
+    align-items: center;
+
+    a {
+        color: var(--branco);
+        padding: 0 0.5rem;
+        display: inline-block;
+        position: relative;
+        transition: color 0.7s;
+
+        & + a {
+            margin-left: 0.3rem;
+        }
+
+        &:hover {
+            color: var(--red-900);
+        }
+    }
+
+    button {
+        margin-left:  1rem;
+        background: transparent;
+        border: 0;
+        transition: transform 0.8s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media (min-width: 450px) {
+    .headerContent {
+        max-width: 1120px;
+    }
+}
+
+@media (max-width: 450px) {
+    .headerContent {
+
+        h1 {
+            cursor: pointer;
+            
+            font-size: 0.9em;
+        }
+    }
+
+    .menuNav {
+        a {
+            font-size: 0.8em;
+        }
+    }
+
+    .nomeUsuario {
+        h2 {
+            padding-left: 0.3rem;
+            font-size: 0.7em;
+        }
+    
+    }
+}
+
