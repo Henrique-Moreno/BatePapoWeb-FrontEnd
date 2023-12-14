@@ -32,10 +32,10 @@ export default function Cadastro() {
       name,
       birthdate,
       nickname,
-      password,
-    };
+      password
+    }
 
-    await signUp(data);
+    //await signUp(data);
 
     setLoading(false);
   }
@@ -69,7 +69,7 @@ export default function Cadastro() {
             />
 
             <Input
-              placeholder="Data de Nascimento"
+              placeholder="Nome ou apelido"
               type="text"
               value={nickname}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
